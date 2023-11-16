@@ -3,7 +3,6 @@ import Layout from "./components/Layout";
 import NotFound from "./pages/NotFound/NotFound";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-
 const App = () => {
   return (
     <Routes>
