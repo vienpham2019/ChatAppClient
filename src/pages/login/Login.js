@@ -1,9 +1,13 @@
-import bannerImage from "../../images/banner.png";
 import { Link } from "react-router-dom";
+import AuthorizationBanner from "../../components/AuthorizationBanner";
+
 const Login = () => {
   return (
     <div className="bg-slate-900 flex justify-center items-center h-screen">
-      <div className="flex gap-10 px-5 py-10 bg-slate-700 rounded-lg overflow-hidden">
+      <div
+        className="flex gap-10 px-5 py-10 bg-slate-700 rounded-lg overflow-hidden"
+        style={{ height: "35rem" }}
+      >
         <div className="grid gap-6 w-96 text-white p-5  rounded-xl">
           <div>
             <h1 className="text-3xl font-light">Login</h1>
@@ -11,14 +15,14 @@ const Login = () => {
           </div>
 
           <form className="grid gap-6">
-            <div className=" grid gap-6 font-extralight text-gray-400">
+            <div className="grid gap-6 font-extralight text-gray-400">
               <div className="input-box">
                 <input
                   className="bg-transparent border border-gray-400 w-full"
                   required
-                  type="text"
+                  type="email"
                 />
-                <span className="bg-slate-700">User name</span>
+                <span className="bg-slate-700">Email</span>
               </div>
               <div className="input-box ">
                 <input
@@ -33,7 +37,10 @@ const Login = () => {
                   <input className="cursor-pointer" type="checkbox" />
                   <span className="text-sm">Remember me</span>
                 </div>
-                <Link className="text-cyan-400 font-normal">
+                <Link
+                  className="text-cyan-400 font-normal"
+                  to={"/reset_password"}
+                >
                   Forgot password?
                 </Link>
               </div>
@@ -55,20 +62,13 @@ const Login = () => {
             <span className="font-extralight text-gray-400">
               You don't have an account yet?
             </span>
-            <Link className=" text-cyan-400">Register</Link>
+            <Link className=" text-cyan-400" to={"/register"}>
+              Register
+            </Link>
           </div>
         </div>
-        <div className="hidden w-96 xl:block relative">
-          <div
-            style={{ height: "40em" }}
-            className=" aspect-square grid items-center bg-cyan-800 rounded-ss-full -top-24 left-1 absolute"
-          ></div>
-          <img
-            className="w-full absolute top-10"
-            src={bannerImage}
-            alt="banner image"
-          />
-        </div>
+
+        <AuthorizationBanner />
       </div>
     </div>
   );
