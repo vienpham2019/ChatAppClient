@@ -5,13 +5,15 @@ const Login = () => {
   return (
     <div className="bg-slate-900 flex justify-center items-center h-screen">
       <div
-        className="flex gap-10 px-5 py-10 bg-slate-700 rounded-lg overflow-hidden"
-        style={{ height: "35rem" }}
+        className="flex gap-10 px-5 py-10 bg-slate-700 rounded-lg overflow-hidden "
+        style={{ height: "40rem" }}
       >
-        <div className="grid gap-6 w-96 text-white p-5  rounded-xl">
+        <div className="grid gap-6 w-96 text-white p-5 animate-fade-in">
           <div>
-            <h1 className="text-3xl font-light">Login</h1>
-            <h3 className="text-lg text-slate-400 font-thin">Welcome back</h3>
+            <h1 className="text-3xl font-light">Welcome back!</h1>
+            <h3 className="text-lg text-slate-400 font-thin">
+              Log in to access your account
+            </h3>
           </div>
 
           <form className="grid gap-6">

@@ -20,9 +20,9 @@ const ResetPassword = () => {
     <div className="bg-slate-900 flex justify-center items-center h-screen">
       <div
         className="flex gap-10 px-5 py-10 bg-slate-700 rounded-lg overflow-hidden"
-        style={{ height: "35rem" }}
+        style={{ height: "40rem" }}
       >
-        <div className="grid gap-6 w-96 text-white p-5  rounded-xl">
+        <div className="grid gap-6 w-96 text-white p-5 animate-fade-in">
           <div>
             <h1 className="text-3xl font-light">Reset your password</h1>
             <span className="text-slate-300 font-thin">
@@ -67,7 +67,7 @@ const ResetPassword = () => {
               Reset Password
             </button>
           </form>
-          <hr />
+          <hr className="border-gray-500" />
           <div className="flex justify-between">
             <span className="text-gray-300 font-thin">Know your password?</span>
             <Link className="text-cyan-400" to={"/login"}>
