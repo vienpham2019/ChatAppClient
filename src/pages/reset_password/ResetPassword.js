@@ -8,7 +8,7 @@ const password_validation = [
   { content: "Must contain a number" },
   { content: "Must contain a special character (!,%,@,#,ect)" },
 ];
-const Register = () => {
+const ResetPassword = () => {
   const checkValidPassword = () =>
     password_validation.map((valid) => (
       <li className="flex gap-1 items-center">
@@ -19,32 +19,14 @@ const Register = () => {
   return (
     <div className="grid gap-6 w-96 text-white p-5 animate-fade-in">
       <div>
-        <h1 className="text-3xl font-light">Join us today!</h1>
+        <h1 className="text-3xl font-light">Reset your password</h1>
         <span className="text-slate-300 font-thin">
-          Sign up now to become a member
+          Enter your new password below
         </span>
       </div>
 
       <form className="grid gap-6">
         <div className="grid gap-4 font-extralight text-gray-400">
-          <div className="flex gap-2">
-            <div className="input-box">
-              <input
-                className="bg-transparent border border-gray-400 w-full"
-                required
-                type="text"
-              />
-              <span className="bg-slate-700">First name</span>
-            </div>
-            <div className="input-box">
-              <input
-                className="bg-transparent border border-gray-400 w-full"
-                required
-                type="text"
-              />
-              <span className="bg-slate-700">Last name</span>
-            </div>
-          </div>
           <div className="input-box">
             <input
               className="bg-transparent border border-gray-400 w-full"
@@ -60,7 +42,7 @@ const Register = () => {
                 type="password"
                 required
               />
-              <span className="bg-slate-700">Password</span>
+              <span className="bg-slate-700">New Password</span>
             </div>
             <div className="p-2 mx-2 text-sm rounded-lg text-slate-100">
               <ul>{checkValidPassword()}</ul>
@@ -77,12 +59,12 @@ const Register = () => {
         </div>
 
         <button className="w-full border-cyan-600 py-2 rounded-full bg-cyan-700 hover:bg-cyan-800">
-          Register
+          Reset Password
         </button>
       </form>
       <hr className="border-gray-500" />
       <div className="flex justify-between">
-        <span className="text-gray-300 font-thin">Already have account?</span>
+        <span className="text-gray-300 font-thin">Know your password?</span>
         <Link className="text-cyan-400" to={"/login"}>
           Log in
         </Link>
@@ -91,4 +73,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default ResetPassword;
