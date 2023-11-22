@@ -56,3 +56,80 @@
   }
 }
 /* Animate */
+
+/* Tooltip */
+.tooltip-pointer {
+  cursor: pointer;
+}
+
+.tooltip-pointer:hover ~ .tooltip {
+  display: block;
+}
+
+.tooltip {
+  --width: 0.5rem;
+  --background_color: rgb(0, 91, 177);
+  position: absolute;
+  display: none;
+  background-color: var(--background_color);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tooltip-left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 2px;
+  aspect-ratio: 1;
+  left: calc(var(--width) * -0.9);
+  border-top: var(--width) solid transparent;
+  border-bottom: var(--width) solid transparent;
+  border-right: var(--width) solid var(--background_color);
+}
+/* Tooltip */
+
+/* Nav active */
+
+.nav-active {
+  --color: rgb(90, 139, 208);
+}
+
+.nav-active .icon {
+  color: var(--color);
+}
+
+.nav-active::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color);
+  height: 2rem;
+  width: 3px;
+  right: -1.6rem;
+}
+/* Nav active */
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: -0.6rem;
+  left: 1rem;
+  border-width: 3px;
+  border-style: solid;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 100%;
+  width: 1.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge > p {
+  padding: 0;
+  line-height: 0;
+}
+/* Badge */

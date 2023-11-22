@@ -4,11 +4,7 @@ const NotFound = () => {
   return (
     <div className="flex justify-center items-center h-screen ">
       <div className="flex flex-col items-center gap-5 text-center px-2">
-        <img
-          className="w-64 md:w-96 "
-          src={notfoundimg}
-          alt="not found image"
-        />
+        <img className="w-64 md:w-96 " src={notfoundimg} alt="not found" />
         <span className="text-base tracking-tight uppercase md:text-2xl">
           oops, sorry we can't find that page
         </span>

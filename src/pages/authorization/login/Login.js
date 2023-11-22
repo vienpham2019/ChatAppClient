@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AuthorizationBanner from "../../components/AuthorizationBanner";
 
 const Login = () => {
   return (
