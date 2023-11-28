@@ -126,10 +126,6 @@ const UserLayout = () => {
           {displayNavLinks()}
         </div>
         <div className="grid gap-5">
-          <div className="flex flex-col items-center">
-            <PiGlobeLight className="w-7 h-7 text-skin-muted cursor-pointer" />
-            <small className="font-thin">Languages</small>
-          </div>
           <div className="flex flex-col items-center cursor-pointer">
             <PiMoonLight
               className={`w-8 h-8 text-skin-muted ${
