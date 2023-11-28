@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-text-base: #fff;
+    --color-text-muted: #a5a8b6;
+    --color-text-dm-base: #fff;
+    --color-text-dm-muted: #a5a8b6;
+    --color-text-lm-base: #1f1f1f;
+    --color-text-lm-muted: #2d2d2d;
+
+    --color-fill: #4338ca;
+    --color-dm-fill: #303030;
+    --color-lm-fill: #ffffff;
+    --color-dm-fill-hover: #505050;
+    --color-lm-fill-hover: #d3d1d1;
+
+    --color-text-theme-base: #4f46e5;
+    --color-text-theme-mute: #4f46e5;
+
+    --color-theme-fill: #4338ca;
+  }
+
+  .theme-red {
+    --color-text-theme-base: #dc4848;
+    --color-text-theme-mute: #e54646;
+
+    --color-theme-fill: #ca3838;
+  }
+}
+
 /* Input box */
 .input-box {
   position: relative;
@@ -57,57 +86,19 @@
 }
 /* Animate */
 
-/* Tooltip */
-.tooltip-pointer {
-  cursor: pointer;
-}
-
-.tooltip-pointer:hover ~ .tooltip {
-  display: block;
-}
-
-.tooltip {
-  --width: 0.5rem;
-  --background_color: rgb(0, 91, 177);
-  position: absolute;
-  display: none;
-  background-color: var(--background_color);
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.tooltip-left::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  top: 2px;
-  aspect-ratio: 1;
-  left: calc(var(--width) * -0.9);
-  border-top: var(--width) solid transparent;
-  border-bottom: var(--width) solid transparent;
-  border-right: var(--width) solid var(--background_color);
-}
-/* Tooltip */
-
 /* Nav active */
 
-.nav-active {
-  --color: rgb(90, 139, 208);
-}
-
 .nav-active .icon {
-  color: var(--color);
+  color: var(--color-text-theme-base);
 }
 
 .nav-active::before {
   content: "";
   position: absolute;
-  background-color: var(--color);
+  background-color: var(--color-text-theme-base);
   height: 2rem;
   width: 3px;
-  right: -1.6rem;
+  right: -0.9rem;
 }
 /* Nav active */
 
@@ -115,7 +106,7 @@
 .badge {
   position: absolute;
   top: -0.6rem;
-  left: 1rem;
+  left: 1.6rem;
   border-width: 3px;
   border-style: solid;
   font-size: 0.7rem;
