@@ -10,11 +10,10 @@ import {
   PiBell,
   PiMoonLight,
   PiSunDimLight,
-  PiGlobeLight,
-  PiCheckBold,
 } from "react-icons/pi";
 
 import { useState } from "react";
+import Badge from "./Badge";
 
 const UserLayout = () => {
   const [activeTooltip, setActiveTooltip] = useState("Profile");
@@ -83,11 +82,7 @@ const UserLayout = () => {
           <div className="relative flex flex-col items-center">
             {icon}
             <small className="font-thin">{l.tooltip}</small>
-            {l?.badge > 0 && (
-              <div className="badge border-gray-800 bg-red-600">
-                <p>{l.badge}</p>
-              </div>
-            )}
+            <Badge badge_val={l?.badge} type={"notification"} />
           </div>
         </Link>
       );
@@ -144,9 +139,7 @@ const UserLayout = () => {
           <hr className="my-3 border-gray-500" />
           <div className="relative flex justify-center">
             <div className="relative">
-              <div className="badge border-gray-800 bg-lime-600">
-                <PiCheckBold />
-              </div>
+              <Badge type={"do not disturb"} />
               <img
                 className="w-12 rounded-full border-2 cursor-pointer"
                 src="https://i.pravatar.cc/300?img=47"
