@@ -113,7 +113,7 @@ const UserLayout = () => {
   };
   return (
     <div
-      className="flex h-screen theme-red"
+      className="flex h-screen"
       onClick={() => profileModal && setProfileModal(false)}
     >
       <div className="w-20 bg-gray-800 flex flex-col justify-between text-skin-base py-14">
@@ -160,7 +160,9 @@ const UserLayout = () => {
           </div>
         </div>
       </div>
-      <Outlet />
+      <div className="w-[20rem]">
+        <Outlet />
+      </div>
     </div>
   );
 };
